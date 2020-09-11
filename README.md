@@ -1,10 +1,16 @@
 # ComplexO
-Código em C para alunos de ACH2023.
+Código em C para alunos de ACH2023. Conteúdo oficial da disciplina:
+[http://www.each.usp.br/digiampietri/ACH2023/]
 
 ## Sites que podem ajudar nos estudos
 
 Algoritmos do prof. Paulo Feofiloff
 [https://www.ime.usp.br/~pf/algoritmos/]
+
+Estruturas de dados e Análise de Algoritmos (também do Feofiloff)
+[https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/index.html]
+
+[https://www.ime.usp.br/~pf/analise_de_algoritmos/]
 
 ## Dicas
 
