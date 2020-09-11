@@ -10,25 +10,36 @@ Algoritmos do prof. Paulo Feofiloff
 
 O Windows possui problemas para quem utiliza antivírus. Vocês podem até compilar, mas é capaz que não execute. Sendo assim, mantenham desativado durante os estudos!
 
-## Compilação
+## Compilação arquivo único
 
 ```
-$ gcc -o <nomeDoPrograma> <nomeDoPrograma.c>
+gcc -o <nomeDoPrograma> <nomeDoPrograma>.c
+```
+
+## Compilação de múltiplos arquivos
+
+Alguns arquivos disponibilizados pelo professor contém mais de um arquivo, isto é, no topo deles tem um #include "codigo.c". Para compilar:
+
+```
+gcc -c <arquivo1>.c
+gcc -c <arquivo2>.c
+...
+gcc -o <nomeDoProgramaParaExecutar> <arquivoComMain>.c
 ```
 
 ## Execução
 
 Para Windows: 
 ```
-$ .\<nomeDoPrograma>
+.\<nomeDoPrograma>
 ```
 ou 
 ```
-$ .\<nomeDoPrograma>.exe
+.\<nomeDoPrograma>.exe
 ```
 Para Ubuntu: 
 ```
-$ ./<nomeDoPrograma>
+./<nomeDoPrograma>
 ```
 
 ## Informações importantes
