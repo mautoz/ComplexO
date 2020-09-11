@@ -58,7 +58,7 @@ void inserirFim(Lista **l, int ch) {
 
 void removerInicio(Lista **l) {
     if (*l == NULL) {
-        printf("A lista jah estah vazia\n");
+        printf("Nao ha o que remover no inicio! A lista jah estah vazia\n");
         return;
     }
 
@@ -70,20 +70,42 @@ void removerInicio(Lista **l) {
 }
 
 void removerFim(Lista **l) {
+    // Verficia se a lista não está vazia 
     if (*l == NULL) {
-        printf("A lista jah estah vazia\n");
+        printf("Nao ha o que remover do fim! A lista jah estah vazia\n");
         return;
     }
 
-    Lista *aux = *l;
+    // Lista só tem um elemento?
+    if ((*l)->prox == NULL) {
+        (*l) = NULL;
+        return;
+    }
+    // Caso o código chegue nessa linha, a lista não é vazia
+    // e possui mais de um elemento
 
-    while (aux->prox != NULL)
-        aux = aux->prox;
+    // Primeiro elemento da lista l
+    Lista *anterior = *l;
+    // Segundo elemento da lista l
+    Lista *atual = (*l)->prox;
 
+
+    while (atual->prox != NULL) {
+        anterior = anterior -> prox;
+        atual = atual ->prox;
+    }
+
+    anterior->prox = NULL;
+    free(atual);
 }
 
 void imprimir(Lista *l) {
     Lista *aux;
+
+    if (l == NULL) {
+        printf("Lista Vazia!\n");
+        return;
+    }
 
     for(aux=l; aux!=NULL; aux=aux->prox) {
         printf("%d ", aux->chave);
@@ -107,6 +129,22 @@ int main () {
     inserirFim(&p, 9);
     inserirFim(&p, 8);
     imprimir(p);
-
+    removerFim(&p);
+    imprimir(p);
+    removerFim(&p);
+    imprimir(p);
+    removerFim(&p);
+    imprimir(p);
+    removerFim(&p);
+    imprimir(p);
+    removerFim(&p);
+    imprimir(p);
+    removerInicio(&p);
+    imprimir(p);
+    removerFim(&p);
+    imprimir(p);
+    removerInicio(&p);
+    imprimir(p);
+    
     return 0;
 }
