@@ -1,7 +1,5 @@
 /**************************************************************/
 /* Lista sem nó cabeça com inserção no início                 */
-/* Compilação:                                                */
-/* $ gcc -o listaDinamicaSemCabeca listaDinamicaSemCabeca.c   */
 /**************************************************************/
 
 #include <stdio.h>
@@ -57,15 +55,20 @@ void inserirFim(Lista **l, int ch) {
 }
 
 void removerInicio(Lista **l) {
+    // Lista vazia! nada para ser feito!
     if (*l == NULL) {
         printf("Nao ha o que remover no inicio! A lista jah estah vazia\n");
         return;
     }
 
+    // Lista auxiliar criada para não perder o ponteiro
+    // do início da lista
     Lista *aux = *l;
 
+    // A lista agora aponta para o segundo elemento
     *l = (*l)->prox;
 
+    // Liberamos a memória
     free(aux);
 }
 
@@ -89,7 +92,9 @@ void removerFim(Lista **l) {
     // Segundo elemento da lista l
     Lista *atual = (*l)->prox;
 
-
+    // Percorre a lista e quando atual->prox == NULL quer dizer
+    // que o atual está no fim da lista e o anterior é o penúltimo
+    // isso ajuda pois iremos remover o último elemento.
     while (atual->prox != NULL) {
         anterior = anterior -> prox;
         atual = atual ->prox;
@@ -145,6 +150,6 @@ int main () {
     imprimir(p);
     removerInicio(&p);
     imprimir(p);
-    
+
     return 0;
 }
