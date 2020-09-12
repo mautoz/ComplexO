@@ -52,7 +52,7 @@ ou
 ```
 .\<nomeDoPrograma>.exe
 ```
-Para Ubuntu: 
+Para demais sistemas baseados em UNIX: 
 ```
 ./<nomeDoPrograma>
 ```
@@ -68,7 +68,7 @@ Já para a instalação do GCC, Python e outros, leiam:
 
 Muitos devem utilizar o DevC++ ou o CodeBlocks para editar o código. Existem outras duas opções gratuitas e utéis:
 
-- Sublime:
+- Sublime (a licença é paga, mas dá para usar gratuitamente):
 [https://www.sublimetext.com/]
 
 - VSCode (eu prefiro):
