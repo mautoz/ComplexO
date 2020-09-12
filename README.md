@@ -11,7 +11,7 @@ Código em C para alunos de ACH2023. Conteúdo oficial da disciplina:
 - Estruturas de dados e Análise de Algoritmos (também do Feofiloff): 
 [https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/index.html]
 
-- Análise de Algoritmos
+- Análise de Algoritmos: 
 [https://www.ime.usp.br/~pf/analise_de_algoritmos/]
 
 
