@@ -1,6 +1,6 @@
-/**************************************************************/
-/* Lista sem nó cabeça duplamente ligada                      */
-/**************************************************************/
+/*****************************************/
+/* Lista sem nó cabeça duplamente ligada */
+/*****************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +19,7 @@ void inserirInicio(Lista **l, int ch) {
     // Como será inserido no início, o ant apontará para NULL
     nova->ant = NULL;
 
+    // Caso a lista esteja vazia
     if (*l == NULL) {
         nova->prox = NULL;
         *l = nova;
@@ -34,8 +35,32 @@ void inserirInicio(Lista **l, int ch) {
     *l = nova;
 }
 
+void inserirFim(Lista **l, int ch) {
+    Lista *nova = (Lista *)malloc(sizeof(Lista));
+
+    nova->chave = ch;
+    // Será adicionado no fim, então prox deve ser NULL 
+    nova->prox = NULL;
+
+    //Caso a lista seja vazia
+    if (*l == NULL) {
+        nova->ant = NULL;
+        *l = nova;
+        return;
+    }
+
+    Lista *aux = *l;
+
+    // Procurar o fim da lista
+    while (aux->prox != NULL)
+        aux = aux->prox;
+
+    aux->prox = nova;
+    nova->ant = aux;
+}
+
 void imprimirInicio(Lista *l) {
-    if (l == NULL) {
+    if(l == NULL) {
         printf("A lista está vazia!\n");
         return;
     }
@@ -44,14 +69,14 @@ void imprimirInicio(Lista *l) {
 
     Lista *aux;
 
-    for (aux = l; aux != NULL;  aux = aux->prox) {
+    for(aux = l; aux != NULL;  aux = aux->prox) {
         printf("%d ", aux->chave);
     }
     printf("\n");
 }
 
 void imprimirFim(Lista *l) {
-    if (l == NULL) {
+    if(l == NULL) {
         printf("A lista estah vazia!\n");
         return;
     }
@@ -60,16 +85,18 @@ void imprimirFim(Lista *l) {
 
     Lista *aux, *fim = l;
 
-    while (fim->prox != NULL) 
+    // Ir para o fim da lista
+    while(fim->prox != NULL) 
         fim = fim->prox;
 
-    for (aux = fim; aux != NULL; aux = aux->ant) {
+    //Fim da lista foi achado, agora podemos percorrer do fim para o início
+    for(aux = fim; aux != NULL; aux = aux->ant) {
         printf("%d ", aux->chave);
     }
     printf("\n");
 }
 
-int main () {
+int main() {
     Lista *p = NULL;
 
     inserirInicio(&p, 1);
@@ -78,6 +105,11 @@ int main () {
     inserirInicio(&p, 3);
     inserirInicio(&p, 7);
     inserirInicio(&p, 6);
+    imprimirInicio(p);
+    imprimirFim(p);
+    inserirFim(&p, 7);
+    inserirFim(&p, 8);
+    inserirFim(&p, 9);
     imprimirInicio(p);
     imprimirFim(p);
 
