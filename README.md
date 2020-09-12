@@ -1,6 +1,7 @@
-# ComplexO
+# Complex0
 Código em C para alunos de ACH2023. Conteúdo oficial da disciplina:
 [http://www.each.usp.br/digiampietri/ACH2023/]
+
 
 ## Sites que podem ajudar nos estudos
 
@@ -12,15 +13,18 @@ Estruturas de dados e Análise de Algoritmos (também do Feofiloff):
 
 [https://www.ime.usp.br/~pf/analise_de_algoritmos/]
 
+
 ## Recomendações
 
 O Windows possui problemas para quem utiliza antivírus. Vocês podem até compilar, mas é capaz que não execute. Sendo assim, mantenham desativado durante os estudos!
+
 
 ## Compilação arquivo único
 
 ```
 gcc -o <nomeDoPrograma> <nomeDoPrograma>.c
 ```
+
 
 ## Compilação de múltiplos arquivos
 
@@ -32,6 +36,7 @@ gcc -c <arquivo2>.c
 ...
 gcc -o <nomeDoProgramaParaExecutar> <arquivoComMain>.c
 ```
+
 
 ## Execução
 
@@ -48,13 +53,23 @@ Para Ubuntu:
 ./<nomeDoPrograma>
 ```
 
-## Dicas
 
-Para quem quer utilzar a linha de comando, existem algumas alternativas no lugar do PowerShell  e que é parecido com o Linux, chamado CMDER. Para saber mais: 
+## Sugestões
+
+Para quem quer utilizar a linha de comando, existem algumas alternativas no lugar do PowerShell  e que é parecido com o Linux, chamado CMDER. Para saber mais: 
 [https://cmder.net/]
 
 Já para a instalação do GCC, Python e outros, leiam: 
 [https://chocolatey.org/]
+
+Muitos devem utilizar o DevC++ ou o CodeBlocks para editar o código. Existem outras duas opções gratuitas e utéis:
+
+- Sublime:
+[https://www.sublimetext.com/]
+
+- VSCode (eu prefiro):
+[https://code.visualstudio.com/]
+
 
 ## Informações importantes
 
