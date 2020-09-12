@@ -12,7 +12,7 @@ Estruturas de dados e Análise de Algoritmos (também do Feofiloff):
 
 [https://www.ime.usp.br/~pf/analise_de_algoritmos/]
 
-## Dicas
+## Recomendações
 
 O Windows possui problemas para quem utiliza antivírus. Vocês podem até compilar, mas é capaz que não execute. Sendo assim, mantenham desativado durante os estudos!
 
@@ -47,6 +47,14 @@ Para Ubuntu:
 ```
 ./<nomeDoPrograma>
 ```
+
+## Dicas
+
+Para quem quer utilzar a linha de comando, existem algumas alternativas no lugar do PowerShell  e que é parecido com o Linux, chamado CMDER. Para saber mais: 
+[https://cmder.net/]
+
+Já para a instalação do GCC, Python e outros, leiam: 
+[https://chocolatey.org/]
 
 ## Informações importantes
 
