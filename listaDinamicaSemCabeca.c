@@ -105,6 +105,29 @@ void removerFim(Lista **l) {
     free(atual);
 }
 
+void removerElemento(Lista **l, int ch) {
+    if (*l == NULL) {
+        printf("A lista está vazia! Nao ha o que remover!\n");
+        return;
+    }
+    Lista *anterior = *l;
+    Lista *atual = (*l)->prox;
+
+
+    // Como a lista não verifica elemento repetidos na inserção
+    // o código buscará a primeira ocorrência da chave ch ou NULL
+    // que significa o fim da lista!
+    while (anterior->chave != ch && anterior != NULL)
+        anterior = anterior->prox;
+
+    if (anterior == NULL) {
+        printf("O elemento buscado não existe na lista!");
+        return;
+    }
+
+    // Se passou pelo if, então o elemento foi achado 
+}
+
 void imprimir(Lista *l) {
     Lista *aux;
 
