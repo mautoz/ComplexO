@@ -1,5 +1,6 @@
 # Complex0
-Código em C para alunos de ACH2023. Contém arquivos NÃO oficiais da disciplina, servindo apenas para auxílio. Conteúdo oficial da disciplina: 
+Código em C para alunos de ACH2023. Contém arquivos NÃO oficiais da disciplina, servindo apenas para auxílio. 
+Caso queiram saber o que há de oficial na disciplina, confiram o site do professor: 
 [http://www.each.usp.br/digiampietri/ACH2023/]
 
 Apostila da disciplina: 
