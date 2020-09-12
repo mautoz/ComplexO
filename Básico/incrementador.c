@@ -1,7 +1,3 @@
-/**********************************************/
-/* Lista sem nó cabeça com inserção no início */
-/**********************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 
