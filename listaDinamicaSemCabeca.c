@@ -113,19 +113,29 @@ void removerElemento(Lista **l, int ch) {
     Lista *anterior = *l;
     Lista *atual = (*l)->prox;
 
-
     // Como a lista não verifica elemento repetidos na inserção
     // o código buscará a primeira ocorrência da chave ch ou NULL
     // que significa o fim da lista!
-    while (anterior->chave != ch && anterior != NULL)
+    while (atual->chave != ch && atual != NULL) {
         anterior = anterior->prox;
-
-    if (anterior == NULL) {
+        atual = atual->prox;
+    }
+    // Se atual é NULL, significa que ele percorreu a lista inteira
+    // Mas não encontrou a chave ch.
+    if (atual == NULL) {
         printf("O elemento buscado não existe na lista!");
         return;
     }
 
-    // Se passou pelo if, então o elemento foi achado 
+    // Se passou pelo if, então o elemento foi achado! Sua posição está
+    // guardada na posição atual e em anterior temos a posição do elemento antes do
+    // do que será removido.
+    // Suponha que a lista é 1->2->3->4->5 e vamos eliminar o 3. Então o anterior aponta
+    // para o 2 e o atual para o 3. A linha abaixo faz com que o 2 para de apontar para o 3
+    // e então passe a apontar para o 4.
+    anterior->prox = anterior->prox->prox;
+    // Então liberamos a memória da posição 3
+    free(atual);
 }
 
 void imprimir(Lista *l) {
@@ -159,6 +169,8 @@ int main () {
     inserirFim(&p, 8);
     imprimir(p);
     removerFim(&p);
+    imprimir(p);
+    removerElemento(&p, 1);
     imprimir(p);
     removerFim(&p);
     imprimir(p);

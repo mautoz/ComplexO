@@ -77,4 +77,4 @@ Muitos devem utilizar o DevC++ ou o CodeBlocks para editar o código. Existem ou
 
 ## Informações importantes
 
-Os código colocados aqui não substituem as aulas, exercício ou qualquer outro material do professor Luciano. O material deste repositório serve apenas para auxiliar nos estudos, pois é interessante ver outras maneiras de estruturar o código.
+Os código colocados aqui não substituem as aulas, exercícios, material ou qualquer orientação do professor Luciano. O material deste repositório serve apenas para auxiliar nos estudos, pois é interessante ver outras maneiras de estruturar o código.
