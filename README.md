@@ -1,5 +1,7 @@
+![EACH USP](img/each.png)
+
 # Complex0
-Código em C para alunos de ACH2023. 
+Código em C para alunos de ACH2023 na EACH-USP. 
 Contém arquivos NÃO oficiais da disciplina, servindo apenas para auxílio. 
 Caso queiram saber o que há de oficial na disciplina, confiram o site do professor: 
 [http://www.each.usp.br/digiampietri/ACH2023/]
