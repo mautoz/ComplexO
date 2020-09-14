@@ -70,18 +70,18 @@ Para demais sistemas baseados em UNIX:
 ## Sugestões
 
 Para quem quer utilizar a linha de comando, existem algumas alternativas no lugar do PowerShell  e que é parecido com o Linux, chamado CMDER. Para saber mais: 
-[https://cmder.net/]
+(https://cmder.net/)
 
 Já para a instalação do GCC, Python e outros, leiam: 
-[https://chocolatey.org/]
+(https://chocolatey.org/)
 
 Muitos devem utilizar o DevC++ ou o CodeBlocks para editar o código. Existem outras duas opções gratuitas e utéis:
 
 - Sublime (a licença é paga, mas dá para usar gratuitamente):
-[https://www.sublimetext.com/]
+(https://www.sublimetext.com/)
 
 - VSCode (eu prefiro):
-[https://code.visualstudio.com/]
+(https://code.visualstudio.com/)
 
 
 ## Informações importantes
