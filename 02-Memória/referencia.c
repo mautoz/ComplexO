@@ -21,7 +21,7 @@ int main () {
 
     // Quando passamos apenas o valor
     printf("Antes de func2: %d\n", num);
-    func1(&num);
+    func2(num);
     printf("Antes de func2: %d\n", num);
 
     return 0;

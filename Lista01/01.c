@@ -67,7 +67,7 @@ void inserir(No **l, int i) {
 }
 
 // Muito parecida com a ideia do professor, mas o uso dos ponteiros é levemente
-// diferente! Acho que é uma boa maneira de ver que não existe uma única maneira
+// diferente! Acho que é uma boa maneira de ver que não existe uma única forma
 // de fazer os exercícios.
 void inserirOrdenado(No **l, int i) {
     No *novo = (No *)malloc(sizeof(No));

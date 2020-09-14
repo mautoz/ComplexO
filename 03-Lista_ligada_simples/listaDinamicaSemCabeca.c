@@ -137,7 +137,7 @@ void removerElemento(Lista **l, int ch) {
     // guardada na posição atual e em anterior temos a posição do elemento antes do
     // do que será removido.
     // Suponha que a lista é 1->2->3->4->5->NULL e vamos eliminar o 3. Então o anterior aponta
-    // para o 2 e o atual para o 3. A linha abaixo faz com que o 2 para de apontar para o 3
+    // para o 2 e o atual para o 3. A linha abaixo faz com que o 2 pare de apontar para o 3
     // e então passe a apontar para o 4.
     anterior->prox = anterior->prox->prox;
     // Então liberamos a memória da posição 3
