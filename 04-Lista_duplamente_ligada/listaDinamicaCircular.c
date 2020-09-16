@@ -31,10 +31,12 @@ void inserir(Lista **l, int ch) {
         return;
     }
 
-    //Se chegou aqui, então *l != NULL, isto é, a lista contém
+    // Se chegou aqui, então *l != NULL, isto é, a lista contém
     // ao menos um elemento.
     printf("Inserindo mais elementos...\n");
     Lista *aux = *l;
+    // Buscamos o último elemento da lista que, por ser circular,
+    // apontará para o primeiro elemento.
     while(aux->prox != *l)
         aux = aux->prox;
 
@@ -44,10 +46,25 @@ void inserir(Lista **l, int ch) {
     (*l)->ant = nova;
 }
 
+int buscaElemento(Lista *l, int ch) {
+    if(l == NULL)
+        return 0;
 
+    Lista *aux = l;
+
+    do {
+        if(aux->chave == ch)
+            return 1;
+        aux = aux->prox;
+    } while(aux != l);
+
+    return 0;
+}
+
+// Imprimi no sentido horário
 void imprimirHorario(Lista *l) {
     if(l == NULL) {
-        printf("A lista está vazia!\n");
+        printf("A lista estah vazia!\n");
         return;
     }
 
@@ -60,9 +77,10 @@ void imprimirHorario(Lista *l) {
     printf("\n");
 }
 
+// Imprimi no sentido anti-horário
 void imprimirAntiHorario(Lista *l) {
     if(l == NULL) {
-        printf("A lista está vazia!\n");
+        printf("A lista estah vazia!\n");
         return;
     }
 
@@ -80,7 +98,7 @@ int main() {
     Lista *p;
 
     inicializar(&p);
-
+    // Inseri ordenado para ficar bonito na impressão
     inserir(&p, 1);
     imprimirHorario(p);
     imprimirAntiHorario(p);
@@ -99,6 +117,12 @@ int main() {
     inserir(&p, 6);
     imprimirHorario(p);
     imprimirAntiHorario(p);
+
+    int num = 8;
+    if(buscaElemento(p, num))
+        printf("Existe o elemento!\n");
+    else 
+        printf("Nao existe o elemento.\n");
     
     return 0;
 }

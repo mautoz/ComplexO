@@ -16,7 +16,7 @@ int main () {
     printf("%d\n", ++i);
     printf("%d\n\n", i);    
 
-    // Esse dica simples é útil para deixar o código mais enxuto
+    // Essa dica simples é útil para deixar o código mais enxuto
     // em situações como alterar uma posição em arranjo.
     // Ao invés de fazer:
     // A[i] = x;

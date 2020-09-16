@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 int main () {
-    // Quando trabalhamos com laços, as vezes, queremos
-    // que ou ele encerre o laço dada uma condição ou ele não
-    // execute parte do código caso uma outra condição.
+    // As vezes, quando trabalhamos com laços, queremos
+    // que ele encerre o loop dada uma condição ou que não
+    // execute parte do código caso uma outra condição ocorra.
     // Para altarar um loop, existem o break e o continue.
 
     // O break, vcs conhecem do switch. Dentro de um laço,
