@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 void recursao(int *v, int *max, int *posicao) {
-    if (*posicao == 8)
+    if (*posicao == 11)
         return;
     if (*max < v[*posicao])
         *max = v[*posicao];
@@ -13,20 +13,22 @@ void recursao(int *v, int *max, int *posicao) {
 }
 
 int main() {
-    int v[8] = {1, 2, 3, 5, 4, 9, 8, 7};
+    int v[11] = {1, 2, 3, 5, 4, 9, 8, 7, 15, 100, 0};
     int i;
     int maximo = -1;
 
-    for (i = 0; i < 8; i++) {
+    // Imprimir o vetor
+    for (i = 0; i < 11; i++) {
         printf("%d ", v[i]);
     }
     printf("\n");
 
     i = 0;
 
+    // Verifica recursivamente o maior elemento.
     recursao(v, &maximo, &i);
 
-    printf("**Maximo é: %d**", maximo);
+    printf("\n\n**Maximo é: %d**\n\n", maximo);
 
 	return 0;
 }
